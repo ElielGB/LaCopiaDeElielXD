@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        >
+
+
+        <ImageView
+            android:id="@+id/imView"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            app:srcCompat="@drawable/platillo01"
+            />
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:layout_below="@id/imView"/>
+
+        <TextView
+            android:id="@+id/tvPrecio"
+            android:layout_width="100dp"
+            android:layout_height="47dp"
+            android:layout_below="@id/tvNombre"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:text="$70.00"
+            android:textColor="@color/teal_700"
+            android:textSize="30sp" />
+
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignTop="@id/tvPrecio"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@id/tvPrecio"
+            android:layout_weight="0"
+            android:numStars="5"
+            android:rating="2" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
